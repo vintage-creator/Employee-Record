@@ -21,19 +21,17 @@ app.get("/", (req, res) => {
 });
 
 mongoose.connection.once("open", async () => {
-    const chalk = (await import("chalk")).default;
-    console.log(chalk.blue("Connected to the Employee Database."));
+    console.log("Connected to the Employee Database.");
     app.listen(port, async (err) => {
       if (err) {
         throw new Error("Error connecting to the server");
       }
-      console.log(chalk.bgRed(`Server is running on http://localhost:${port}`));
+      console.log(`Server is running on http://localhost:${port}`);
     });
   });
   
   mongoose.connection.on("error", async (err) => {
-    const chalk = (await import("chalk")).default; // Import chalk dynamically
-    console.error(chalk.red("MongoDB connection error:", err));
+    console.error("MongoDB connection error:", err);
     process.exit(1);
   });
   

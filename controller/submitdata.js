@@ -39,7 +39,7 @@ const submitdataFn = async (req, res) => {
             disabilities, employerName, positionTitle, reportsTo, employmentType, usualDaysOfEmployment, startDate,
             contractEndDate, bankDetails, tax,
             // Add the file path to the employee data if available
-            filePath: filePath,
+            uploadedForm: filePath,
         };
 
         await Employee.create(employeeData);
