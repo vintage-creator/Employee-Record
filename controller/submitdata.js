@@ -22,26 +22,41 @@ const upload = multer({
 
 const submitdataFn = async (req, res) => {
     try {
-
-        // Construct the employee object
+        // Parse JSON strings to JavaScript objects
         const {
-            firstname, lastname, email, birthdate, address, phoneNumber, emergencyContact, citizenship, ssn, veteranStatus, disabilities,
-            employerName, positionTitle, reportsTo, employmentType, usualDaysOfEmployment, startDate, contractEndDate, bankDetails, tax
+            birthdate, address, emergencyContact, startDate, contractEndDate, bankDetails,
+            disabilities, usualDaysOfEmployment, taxOptions
         } = req.body;
+        const parsedBirthdate = JSON.parse(birthdate);
+        const parsedAddress = JSON.parse(address);
+        const parsedEmergencyContact = JSON.parse(emergencyContact);
+        const parsedStartDate = JSON.parse(startDate);
+        const parsedContractEndDate = JSON.parse(contractEndDate);
+        const parsedBankDetails = JSON.parse(bankDetails);
+        const parsedDisabilities = JSON.parse(disabilities);
+        const parsedUsualDaysOfEmployment = JSON.parse(usualDaysOfEmployment);
+        const parsedTaxOptions = JSON.parse(taxOptions);
 
-        await validateEmail(email);
+        // Validate email
+        await validateEmail(req.body.email);
 
         // Check if a file was uploaded before accessing its properties
         const filePath = req.file ? req.file.path : null;
 
         const employeeData = {
-            firstname, lastname, email, birthdate, address, phoneNumber, emergencyContact, citizenship, ssn, veteranStatus,
-            disabilities, employerName, positionTitle, reportsTo, employmentType, usualDaysOfEmployment, startDate,
-            contractEndDate, bankDetails, tax,
-            // Add the file path to the employee data if available
-            uploadedForm: filePath,
+            ...req.body,
+            birthdate: parsedBirthdate,
+            address: parsedAddress,
+            emergencyContact: parsedEmergencyContact,
+            startDate: parsedStartDate,
+            contractEndDate: parsedContractEndDate,
+            bankDetails: parsedBankDetails,
+            disabilities: parsedDisabilities,
+            usualDaysOfEmployment: parsedUsualDaysOfEmployment,
+            taxOptions: parsedTaxOptions,
+            taxDeclarationForm: filePath,
         };
-
+        // Create employee
         await Employee.create(employeeData);
 
         // Send success response

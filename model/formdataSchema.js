@@ -10,9 +10,9 @@ const employeeSchema = new mongoose.Schema({
         required: true,
     },
     birthdate: {
-        month: Number,
-        day: Number,
-        year: Number,
+        month: String,
+        day: String,
+        year: String,
     },
     address: {
         streetAddressLine1: String,
@@ -41,14 +41,14 @@ const employeeSchema = new mongoose.Schema({
     employmentType: String,
     usualDaysOfEmployment: [String],
     startDate: {
-        month: Number,
-        day: Number,
-        year: Number,
+        month: String,
+        day: String,
+        year: String,
     },
     contractEndDate: {
-        month: Number,
-        day: Number,
-        year: Number,
+        month: String,
+        day: String,
+        year: String,
     },
     bankDetails: {
         institutionName: String,
@@ -56,10 +56,8 @@ const employeeSchema = new mongoose.Schema({
         routingNumber: String,
         accountNumber: String,
     },
-    tax: {
-        options: [String],
-        uploadedForm: String,
-    },
+    taxOptions: [String],
+    taxDeclarationForm: String,
 });
 
 module.exports = mongoose.model('Employee', employeeSchema);
