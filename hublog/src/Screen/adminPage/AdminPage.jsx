@@ -106,13 +106,17 @@ const AdminPage = () => {
                 <td>{item.bankDetails.accountNumber}</td>
                 <td>{item.taxOptions.join(", ")}</td>
                 <td>
-                  <a
-                    href={`https://employee-record-aiqw.onrender.com/${encodeURIComponent(item.taxDeclarationForm)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Tax Declaration Form
-                  </a>
+                  {item.taxDeclarationForm && (
+                    <a
+                      href={`https://employee-record-aiqw.onrender.com/${encodeURIComponent(
+                        item.taxDeclarationForm
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Tax Declaration Form
+                    </a>
+                  )}
                 </td>
               </tr>
             ))}
