@@ -21,19 +21,26 @@ app.use("/api", getdata_route);
 const port = process.env.NODE_ENV === "production" ? process.env.PORT : 5500;
 
 app.get('/files/:filename', (req, res) => {
-  const url = req.params.filename;
+  // Get the filename from the request params
+  const url = decodeURIComponent(req.params.filename);
   const filename = path.basename(url);
+
+  // Construct the file path within your application's directory
   const filePath = path.join(__dirname, 'uploads', filename);
-  console.log(filePath, "file")
 
   // Check if the file exists
-  if (fs.existsSync(filePath)) {
-    // Stream the file to the client
-    fs.createReadStream(filePath).pipe(res);
-  } else {
-    res.status(404).send('File not found');
-  }
+  fs.access(filePath, fs.constants.F_OK, (err) => {
+    if (err) {
+      // File does not exist
+      res.status(404).send('File not found');
+    } else {
+      // File exists, stream it to the client
+      const fileStream = fs.createReadStream(filePath);
+      fileStream.pipe(res);
+    }
+  });
 });
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(staticFilePath, "index.html"));
