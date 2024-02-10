@@ -27,10 +27,9 @@ app.get('/files/:filename', (req, res) => {
 
   // Construct the file path within your application's directory
   const filePath = path.join(__dirname, 'uploads', filename);
-  console.log(filePath, "file1");
+  console.log(filePath, "filepath");
   // Check if the file exists
   fs.access(filePath, fs.constants.F_OK, (err) => {
-    console.log(filePath, "file2");
     if (err) {
       // File does not exist
       res.status(404).send('File not found');
