@@ -108,12 +108,10 @@ const AdminPage = () => {
                 <td>
                   {item.taxDeclarationForm && (
                     <a
-                      href={`https://employee-record-aiqw.onrender.com/${encodeURIComponent(
-                        item.taxDeclarationForm
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    href={`https://employee-record-aiqw.onrender.com/files/${encodeURIComponent(item.taxDeclarationForm)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                       View Tax Declaration Form
                     </a>
                   )}
