@@ -1,0 +1,164 @@
+.container {
+  background: #fff;
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.11);
+  padding: 0 20px;
+  width: 800px;
+  margin: 20px auto;
+  padding: 40px 60px;
+}
+
+.container h1 {
+  font-size: 18px;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+}
+
+h5 {
+  padding-bottom: 10px;
+  font-size: 14px;
+  color: rgb(44, 51, 69);
+}
+.bankDiv input {
+  width: 340px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.RoutingNo input {
+  width: 340px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+.AccountNo input {
+  width: 340px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.taxdetails {
+  padding-top: 40px;
+}
+
+.documentdDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 370px);
+  padding-top: 5px;
+}
+
+.documentdDiv input {
+  width: 30px;
+  margin-bottom: 20px;
+}
+
+.uploadInfo h2 {
+  font-size: 16px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+h2 span {
+  color: red;
+}
+.bankDiv {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  gap: 10px;
+}
+
+.browseFile {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.dragFile {
+  padding-bottom: 20px;
+  padding-top: 5px;
+  font-size: 14px;
+}
+.fileUploadDiv {
+  border: 2px dotted gray;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.linkCopy {
+  font-size: 14px;
+}
+
+.BtnDiv {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+  align-items: center;
+}
+
+.BtnOne {
+  background-color: rgb(220, 205, 205);
+  color: black;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: 16px;
+}
+
+.BtnOne:hover {
+  background-color: rgb(82, 71, 71);
+}
+
+.BtnTwo {
+  background-color: rgb(93, 151, 7);
+  color: #fff;
+  border-radius: 2px;
+  padding: 15px 40px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.BtnTwo:hover {
+  background-color: rgb(39, 63, 2);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 500px;
+  }
+
+  .bankDiv input {
+    width: 190px;
+  }
+
+  .RoutingNo input {
+    width: 250px;
+  }
+  .AccountNo input {
+    width: 250px;
+  }
+
+  .documentdDiv {
+    grid-template-columns: repeat(2, 210px);
+  }
+
+  .documentdDiv input {
+    width: 190px;
+  }
+
+  .documentdDiv span{
+    font-size: 14px;
+  }
+  .BtnOne {
+  
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .BtnTwo {
+    padding: 14px 19px;
+    font-size: 15px;
+  }
+
+
+}

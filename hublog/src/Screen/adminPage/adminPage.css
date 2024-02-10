@@ -1,0 +1,51 @@
+
+.userInfo{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    color: rgb(1, 41, 94);
+}
+.container22{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: #fff;
+    height: 500px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow-x: scroll;
+
+}
+
+table{
+    width: 7000px;
+}
+th{
+    text-align: center;
+    background-color: bisque;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+tr:nth-child(odd){
+    background-color: rgb(233, 235, 235);
+
+}
+td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.backButton{
+    /* margin-left: 100px; */
+    margin-top: 30px;
+    border-radius: 3px;
+cursor: pointer;
+width: 150px;
+padding-top:15px;
+padding-bottom:15px;
+background-color: aquamarine;
+text-align: center;
+
+}

@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Formcontainer {
+  background: #fff;
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.11);
+  padding: 0 20px;
+  width: 800px;
+  margin: 60px auto;
+  padding: 0 50px;
+}
+
+h1 {
+  color: #2c3345;
+  padding-top: 60px;
+  font-size: 33px;
+  padding-bottom: 10px;
+}
+
+.Formcontainer p {
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(124, 122, 122);
+  border-bottom: 1px solid #2c3345;
+  padding-bottom: 40px;
+}
+
+.Formcontainer h2 {
+  font-weight: bold;
+  padding-top: 50px;
+  font-size: 17px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #2c3345;
+  padding-bottom: 40px;
+}
+
+.Formcontainer h3 {
+  padding-top: 50px;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+.Formcontainer h4 {
+  padding-top: 50px;
+  color: #2c3345;
+  font-size: 15px;
+  padding-bottom: 25px;
+}
+
+.Formcontainer h5 {
+ margin-top: 20px;
+  color: rgb(124, 122, 122);
+  font-size: 12px;
+
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameInfo {
+  display: flex;
+  gap: 350px;
+  align-items: center;
+}
+.nameDiv {
+  display: flex;
+  gap: 10px;
+}
+
+.nameDiv input {
+  width: 155px;
+  height: 32px;
+}
+.nameDiv select {
+  width: 87px;
+  height: 37px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.selectDiv {
+  display: flex;
+  margin-left: 50px;
+  gap: 15px;
+}
+
+.addressDiv input{
+  margin-top: 20px;
+}
+
+.addressDiv input {
+  width: 100%;
+  height: 40px;
+}
+
+.citiesDiv {
+  display: flex;
+  width: 100%;
+}
+
+.citiesDiv input {
+  width: 340px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.PostCodeDiv input {
+  width: 100%;
+  height: 40px;
+}
+
+.PhoneDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 370px);
+}
+
+.PhoneDetails input {
+  width: 325px;
+  height: 40px;
+  padding-left: 5px;
+}
+
+.positionDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 370px);
+}
+.positionDiv input {
+  padding: 10px 80px;
+}
+.positionDiv select {
+  width: 330px;
+  height: 40px;
+}
+
+.EmploymentDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 370px);
+}
+.EmploymentDiv input {
+  width: 30px;
+  margin: 7px;
+}
+.EmploymentDiv span{
+  font-size: 15px;
+}
+.dateDiv select {
+  width: 220px;
+  height: 37px;
+}
+
+.DateselectDiv {
+  display: flex;
+  gap: 15px;
+  padding-top: 20px;
+  border-bottom: 1px solid #2c3345;
+  padding-bottom: 20px;
+}
+.NextButton {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px 0;
+}
+
+button {
+  background-color: #2e69ff;
+  color: #fff;
+  padding: 10px 40px;
+  font-size: 18px;
+  border: none;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+
+
+select{
+  font-size: 14px;
+  border-radius: 2px;
+  padding-left: 5px;
+}
+select:hover{
+  border: 2px solid #e5ecff;
+}
+
+select:focus{
+  border: 2px solid#2e69ff;
+  border-radius: 2px;
+  outline: none;
+}
+
+input{
+ font-weight: bold;
+ padding-left: 5px;
+}
+
+ input:hover{
+  border: 2px solid #e5ecff;
+}
+ input:focus{
+  border: 2px solid #2e69ff;
+  outline: none;
+ }
+/* media queries */
+
+@media (max-width: 768px) {
+  .Formcontainer {
+    width: 500px;
+  }
+  .nameDiv select {
+    width: 49px;
+  }
+
+  .nameDiv input {
+    width: 100px;
+  }
+
+  .nameInfo {
+    gap: 180px;
+  }
+  .selectDiv {
+    margin-left: 10px;
+  }
+
+  .citiesDiv input {
+    width: 190px;
+  }
+
+  .PhoneDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+  }
+
+  .PhoneDetails input {
+    width: 195px;
+  }
+
+  .positionDiv {
+    grid-template-columns: repeat(2, 220px);
+  }
+  .positionDiv input {
+    width: 190px;
+  }
+  .positionDiv select {
+    width: 195px;
+  }
+
+  .EmploymentDiv {
+    grid-template-columns: repeat(2, 220px);
+  }
+
+  .dateDiv select {
+    width: 130px;
+    height: 37px;
+  }
+
+  button {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .Formcontainer p {
+    font-size: 14px;
+  }
+
+  .Formcontainer h2 {
+    font-size: 15px;
+  }
+
+  .Formcontainer h3 {
+    font-size: 15px;
+  }
+
+  .Formcontainer h4 {
+    font-size: 12px;
+  }
+
+  .Formcontainer h5 {
+    font-size: 12px;
+  }
+}
